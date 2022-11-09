@@ -22,3 +22,44 @@ const navSlide = () => {
 }
 
 navSlide();
+
+function onEntry(entry) {
+    entry.forEach(change => {
+        if (change.isIntersecting) {
+            change.target.classList.add('element-show');
+        }
+    });
+}
+
+window.onload = () => {
+    let options = {
+        threshold: 0.5
+    };
+    let observer = new IntersectionObserver(onEntry, options);
+    let elementsTitle = document.querySelectorAll('.title');
+    let elementsSubtitle = document.querySelectorAll('.subtitle');
+    let elementsButton = document.querySelectorAll('.button');
+    let elementsImg = document.querySelectorAll('.platform-section-img');
+    let elementsItem = document.querySelectorAll('.advantages__item');
+
+    
+    for (let elm of elementsTitle) {
+        observer.observe(elm);
+    }
+    
+    for (let elm of elementsSubtitle) {
+        observer.observe(elm);
+    }
+
+    for (let elm of elementsButton) {
+        observer.observe(elm);
+    }
+
+    for (let elm of elementsImg) {
+        observer.observe(elm);
+    }
+
+    for (let elm of elementsItem) {
+        observer.observe(elm);
+    }
+}

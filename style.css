@@ -663,6 +663,64 @@ h1, h2, h3, h4, h5, h6 {
   height: 40px;
 }
 
+.title {
+  opacity: 0;
+  transition: all 0.4s ease;
+  transform: translateY(-30px);
+}
+
+.title.element-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subtitle {
+  opacity: 0;
+  transition: all 0.4s ease;
+  transition-delay: 0.2s;
+  transform: translateY(-20px);
+}
+
+.subtitle.element-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.button {
+  opacity: 0;
+}
+
+.button.element-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.platform-section-img {
+  opacity: 0;
+  transition: all 0.4s ease;
+  transition-delay: 0.2s;
+  transform: translateY(-20px);
+}
+
+.platform-section-img img {
+  border-radius: 12px;
+}
+
+.platform-section-img.element-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.advantages__item {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.advantages__item.element-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media screen and (max-width: 1100px) {
   .platform-section-img img {
     width: 600px;
