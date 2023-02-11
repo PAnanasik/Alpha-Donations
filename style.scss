@@ -156,7 +156,7 @@ $maxWidth: 1920;
         height: calc(100vh - 80px);
         top: 80px;
         width: 100%;
-        background-color: #788bff;
+        background: #252525;
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
@@ -211,7 +211,7 @@ $maxWidth: 1920;
 
 .intro {
     width: 100%;
-    height: 92vh;
+    height: 800px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -222,7 +222,7 @@ $maxWidth: 1920;
     top: 0;
     left: 0;
     width: 100%;
-    height: 92vh;
+    height: 800px;
     -o-object-fit: cover;
     object-fit: cover;
     z-index: 1;
@@ -235,11 +235,41 @@ $maxWidth: 1920;
     top: 0;
     left: 0;
     width: 100%;
-    height: 92.09vh;
+    height: 800px;
     z-index: 2;
     background: linear-gradient(to right top, #252525, 65%, rgba(220, 64, 72, 0.2));
     background-size: cover;
     background-position: center;
+}
+
+@media screen and (min-width: 1920px) {
+    .intro {
+        height: calc(1080px - 80px);
+    }
+    
+    .video__item {
+        height: calc(1080px - 80px);
+    }
+    
+    .video__filler {
+        height: calc(1081px - 80px);
+    }
+    
+}
+
+@media screen and (max-width: 1919px) {
+    .intro {
+        height: 92vh;
+    }
+    
+    .video__item {
+        height: 92vh;
+    }
+    
+    .video__filler {
+        height: 92vh;
+    }
+    
 }
 
 .intro__inner {
@@ -260,8 +290,16 @@ $maxWidth: 1920;
 }
 
 .intro__title {
-    @include adaptive-font(48, 24);
+    // @include adaptive-font(48, 24);
+    font-size: 48px;
     font-weight: 700;
+}
+
+@media screen and (max-width: 1090px) {
+    .intro__title {
+        @include adaptive-font(48, 24);
+        font-weight: 700;
+    }
 }
 
 .intro__subtitle {
@@ -281,7 +319,10 @@ $maxWidth: 1920;
     width: 100%;
     transition: all 0.2s ease;
     cursor: pointer;
+    color: #fff;
+    text-decoration: none;
 }
+
 
 .intro__button:hover {
     background: #fff;
