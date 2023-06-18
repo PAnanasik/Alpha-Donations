@@ -205,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   right: 280px;
   top: 0;
-  background-image: url(pictures/Rectangle16.svg);
+  background-image: url(pictures/rectangles/Rectangle16.svg);
   width: 350px;
   height: 200px;
   background-repeat: no-repeat;
@@ -216,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   right: 100px;
   top: 0;
-  background-image: url(pictures/Rectangle14.svg);
+  background-image: url(pictures/rectangles/Rectangle14.svg);
   width: 350px;
   height: 200px;
   background-repeat: no-repeat;
@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   right: 0;
   top: 0;
-  background-image: url(pictures/Rectangle15.svg);
+  background-image: url(pictures/rectangles/Rectangle15.svg);
   width: 280px;
   height: 200px;
   background-repeat: no-repeat;

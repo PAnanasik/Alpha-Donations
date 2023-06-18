@@ -61,7 +61,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
 .container__content {
@@ -87,7 +86,6 @@ h1, h2, h3, h4, h5, h6 {
   background: #1F1F1F;
   border-radius: 10px;
   box-shadow: 10px -5px 25px rgba(0, 0, 0, 0.2);
-  z-index: 10;
 }
 
 .form__auth {

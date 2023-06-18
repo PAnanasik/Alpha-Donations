@@ -1,0 +1,229 @@
+.main-content {
+  position: absolute;
+  width: calc(100% - 68px);
+  left: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px 0;
+}
+
+.profile {
+  width: 100%;
+  max-width: 700px;
+  height: 800px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.profile__header {
+  width: 100%;
+  height: 180px;
+  background: #FF333D;
+  background-image: url(pictures/rectangles/Rectangle59.png), url(pictures/rectangles/Rectangle58.png), url(pictures/rectangles/Rectangle57.png);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: left, center, right;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.profile__info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 150px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 25px;
+}
+
+.profile__text {
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  top: 80px;
+}
+
+.profile__nick {
+  font-family: "Montserrat Black", sans-serif;
+}
+@media (max-width: 767px) {
+  .profile__nick {
+    font-size: calc(16px + 13.6 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  .profile__nick {
+    font-size: calc(16px + 8 * (100vw / 1920));
+  }
+}
+
+@media (max-width: 767px) {
+  .profile__profession {
+    font-size: calc(14px + 6.8 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  .profile__profession {
+    font-size: calc(14px + 4 * (100vw / 1920));
+  }
+}
+
+.profile__img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  position: absolute;
+  top: -75px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.profile__main {
+  width: 100%;
+  height: 380px;
+  padding: 0 25px;
+}
+
+.profile__item-link {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__link-change {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .profile__link-change {
+    font-size: calc(10px + 10.2 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  .profile__link-change {
+    font-size: calc(10px + 6 * (100vw / 1920));
+  }
+}
+
+.profile__subtitle-main {
+  font-weight: 600;
+}
+@media (max-width: 767px) {
+  .profile__subtitle-main {
+    font-size: calc(10px + 13.6 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  .profile__subtitle-main {
+    font-size: calc(10px + 8 * (100vw / 1920));
+  }
+}
+
+.profile__subtitle a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.1s ease;
+}
+
+.profile__link #changing__input {
+  height: 35px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+}
+
+.profile__subtitle a:hover {
+  color: #464646;
+}
+
+.profile__item-link input {
+  height: 30px;
+  width: 100%;
+}
+
+.profile__item {
+  height: 50px;
+  margin: 0 0 40px 0;
+}
+
+.profile__purposes {
+  margin: 30px 0 0 0;
+  height: 300px;
+}
+
+.profile__purpose {
+  border: 1px solid rgba(0, 0, 0, 0.1411764706);
+  height: 35px;
+  border-radius: 4px;
+}
+
+.purpose__progress {
+  background: #FF333D;
+  width: 35%;
+  height: 100%;
+}
+
+.profile__purpose-subtitles {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .profile__purpose-subtitles {
+    font-size: calc(10px + 6.8 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  .profile__purpose-subtitles {
+    font-size: calc(10px + 4 * (100vw / 1920));
+  }
+}
+
+.profile__purpose-subtitle {
+  font-weight: 500;
+}
+
+.profile__purpose-allcash {
+  display: flex;
+}
+
+.profile__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.2509803922);
+}
+@media (max-width: 767px) {
+  .profile__footer {
+    font-size: calc(10px + 6.8 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  .profile__footer {
+    font-size: calc(10px + 4 * (100vw / 1920));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile__img img {
+    width: 120px;
+    height: 120px;
+  }
+  .profile__text {
+    top: 55px;
+  }
+  .profile__header {
+    background-image: none;
+  }
+}/*# sourceMappingURL=profile.css.map */
