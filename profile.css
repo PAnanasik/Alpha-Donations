@@ -155,6 +155,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   padding: 30px 50px 90px 50px;
   display: flex;
+  height: 90%;
 }
 
 .profile {
@@ -166,14 +167,21 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
 }
 
-.profile__main {
+.profile__intro {
   width: 100%;
-  height: 200px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   background: #fbfbfb;
   border-radius: 12px;
+  padding: 0 60px;
+}
+
+.profile__main {
+  width: 50%;
+  height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .profile__img img {
@@ -241,6 +249,50 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
 }
 
+.rectangles {
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #1F1F1F;
+  border-radius: 12px;
+}
+
+.rectangle__item-first {
+  position: absolute;
+  right: 280px;
+  top: 0;
+  background-image: url(pictures/rectangles/Rectangle16.svg);
+  width: 350px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rectangle__item-second {
+  position: absolute;
+  right: 100px;
+  top: 0;
+  background-image: url(pictures/rectangles/Rectangle14.svg);
+  width: 350px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rectangle__item-third {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url(pictures/rectangles/Rectangle15.svg);
+  width: 280px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+}
+
 .title {
   height: 30px;
   color: #e6e6e6;
@@ -249,12 +301,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 767px) {
   .title {
-    font-size: calc(12px + 10.2 * ((100vw - 320px) / 1920));
+    font-size: calc(14px + 6.8 * ((100vw - 320px) / 1920));
   }
 }
 @media (min-width: 767px) {
   .title {
-    font-size: calc(12px + 6 * (100vw / 1920));
+    font-size: calc(14px + 4 * (100vw / 1920));
   }
 }
 
@@ -266,12 +318,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 767px) {
   .subtitle {
-    font-size: calc(10px + 13.6 * ((100vw - 320px) / 1920));
+    font-size: calc(12px + 10.2 * ((100vw - 320px) / 1920));
   }
 }
 @media (min-width: 767px) {
   .subtitle {
-    font-size: calc(10px + 8 * (100vw / 1920));
+    font-size: calc(12px + 6 * (100vw / 1920));
   }
 }
 
@@ -285,12 +337,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 767px) {
   .subtitle-change {
-    font-size: calc(10px + 13.6 * ((100vw - 320px) / 1920));
+    font-size: calc(12px + 10.2 * ((100vw - 320px) / 1920));
   }
 }
 @media (min-width: 767px) {
   .subtitle-change {
-    font-size: calc(10px + 8 * (100vw / 1920));
+    font-size: calc(12px + 6 * (100vw / 1920));
   }
 }
 
@@ -345,12 +397,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 767px) {
   .purpose__circle-inner-text {
-    font-size: calc(14px + 17 * ((100vw - 320px) / 1920));
+    font-size: calc(16px + 13.6 * ((100vw - 320px) / 1920));
   }
 }
 @media (min-width: 767px) {
   .purpose__circle-inner-text {
-    font-size: calc(14px + 10 * (100vw / 1920));
+    font-size: calc(16px + 8 * (100vw / 1920));
   }
 }
 
@@ -384,12 +436,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 767px) {
   .donate__input {
-    font-size: calc(10px + 10.2 * ((100vw - 320px) / 1920));
+    font-size: calc(14px + 3.4 * ((100vw - 320px) / 1920));
   }
 }
 @media (min-width: 767px) {
   .donate__input {
-    font-size: calc(10px + 6 * (100vw / 1920));
+    font-size: calc(14px + 2 * (100vw / 1920));
   }
 }
 
@@ -405,6 +457,15 @@ h1, h2, h3, h4, h5, h6 {
   }
   .purpose__circle-inner-text {
     font-size: 18px;
+  }
+}
+@media screen and (max-width: 1110px) {
+  .rectangles {
+    display: none;
+  }
+  .profile__main {
+    justify-content: center;
+    width: 100%;
   }
 }
 @media screen and (max-width: 915px) {

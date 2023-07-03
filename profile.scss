@@ -177,6 +177,7 @@ $maxWidth: 1920;
     width: 100%;
     padding: 30px 50px 90px 50px;
     display: flex;
+    height: 90%;
 }
 
 .profile {
@@ -188,17 +189,24 @@ $maxWidth: 1920;
     border-radius: 12px;
 }
 
-.profile__main {
+.profile__intro {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #fbfbfb;
+    border-radius: 12px;
+    padding: 0 60px;
+}
+
+.profile__main {
+    width: 50%;
     height: 200px;
     // padding: 50px 0 50px 0;
     // margin: 0 auto;
     // margin-bottom: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background: #fbfbfb;
-    border-radius: 12px;
 }
 
 .profile__img img {
@@ -268,9 +276,53 @@ $maxWidth: 1920;
     justify-content: space-between;
 }
 
+.rectangles {
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #1F1F1F;
+    border-radius: 12px;
+}
+
+.rectangle__item-first {
+    position: absolute;
+    right: 280px;
+    top: 0;
+    background-image: url(pictures/rectangles/Rectangle16.svg);
+    width: 350px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rectangle__item-second {
+    position: absolute;
+    right: 100px;
+    top: 0;
+    background-image: url(pictures/rectangles/Rectangle14.svg);
+    width: 350px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rectangle__item-third {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url(pictures/rectangles/Rectangle15.svg);
+    width: 280px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+}
+
 .title {
     height: 30px;
-    @include adaptive-font(18, 12);
+    @include adaptive-font(18, 14);
     color: #e6e6e6;
     font-weight: 100;
     margin: 15px 0;    
@@ -278,7 +330,7 @@ $maxWidth: 1920;
 
 .subtitle {
     height: 15px;
-    @include adaptive-font(18, 10);
+    @include adaptive-font(18, 12);
     color: #0e0e0e;
     font-weight: 500;
     margin: 15px 0;    
@@ -286,7 +338,7 @@ $maxWidth: 1920;
 
 .subtitle-change {
     height: 15px;
-    @include adaptive-font(18, 10);
+    @include adaptive-font(18, 12);
     color: #0e0e0e;
     font-weight: 200;
     margin: 15px 0;    
@@ -342,7 +394,7 @@ $maxWidth: 1920;
 }
 
 .purpose__circle-inner-text {
-    @include adaptive-font(24, 14);
+    @include adaptive-font(24, 16);
     font-weight: 500;
 }
 
@@ -369,7 +421,7 @@ $maxWidth: 1920;
     outline: none;
     width: 100%;
     height: 30px;
-    @include adaptive-font(16, 10);
+    @include adaptive-font(16, 14);
     font-family: 'Montserrat', 'sans-serif';
     border: 1px solid rgba(0, 0, 0, 0.4);
     padding-left: 5px;
@@ -391,6 +443,17 @@ $maxWidth: 1920;
 
     .purpose__circle-inner-text {
         font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .rectangles {
+        display: none;
+    }
+
+    .profile__main {
+        justify-content: center;
+        width: 100%;    
     }
 }
 

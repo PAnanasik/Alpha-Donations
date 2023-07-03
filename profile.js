@@ -6,6 +6,7 @@ let lastChange = document.querySelector('.donate__last');
 function createFiller() {
     let elem = document.createElement('div');
     elem.style.position = 'absolute';
+    elem.style.top = 0;
     elem.style.width = '100vw';
     elem.style.height = '100vh';
     elem.style.zIndex = '100';
@@ -17,14 +18,13 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         sidebar.classList.toggle('active');
         sidebar.classList.toggle('toggle');
-    }
-
-    if (sidebar.classList.contains('active')) {
-        document.body.append(filler);
-    }
-
-    else {
-        filler.remove();
+        if (sidebar.classList.contains('active')) {
+            document.body.append(filler);
+        }
+    
+        else {
+            filler.remove();
+        }
     }
 })
 
@@ -34,11 +34,9 @@ btnSide.onclick = function () {
     sidebar.classList.toggle('toggle');
     if (sidebar.classList.contains('active')) {
         document.body.append(filler);
-        document.getElementsByTagName('html')[0].style.overflow = "hidden";
     }
     else {
         filler.remove();
-        document.getElementsByTagName('html')[0].style.overflow = "scroll";
     }
 };
 
