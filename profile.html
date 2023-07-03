@@ -38,109 +38,56 @@
 
     <section class="main-content">
         <section class="profile">
-            <div class="profile__header">
-                
-            </div>
-            <div class="profile__info">
+            <div class="profile__main">
                 <div class="profile__img">
                     <img src="pictures/avatar-example.jpg" alt="">
                 </div>
-                <div class="profile__text">
-                    <div class="profile__nick">
-                        PAnanasik
+                <div class="profile__info">
+                    <div class="profile__nick">PAnanasik</div>
+                    <div class="profile__mp">
+                        <div class="profile__prof"><i class='bx bxl-telegram' ></i> Стример</div>
                     </div>
-                    <div class="profile__profession">
-                        стример
+                    <div class="profile__achiv">
+                        <div class="achiv__text">1 год</div>
+                        <div class="achiv__text">миллионер</div>
                     </div>
                 </div>
             </div>
-            <div class="profile__main">
-                <div class="profile__item-link">
-                    <div class="profile__link">
-                        <div class="profile__link-change">
-                            <div class="profile__subtitle-main">
-                                Ссылка на донат
-                            </div>
-                            <div class="profile__subtitle">
-                                <a href="#" id="edit">Редактировать</a>
-                            </div>
-                        </div>
-                        <input type="text" id="changing__input" disabled>
-                    </div>
-                </div>
+            <div class="profile__group">
                 <div class="profile__purposes">
-                    <div class="profile__subtitle-main">
-                        Активные цели
-                    </div>
-                    <div class="profile__item">
-                        <div class="profile__purpose">
-                            <div class="purpose__progress"></div>
-                        </div>
-                        <div class="profile__purpose-subtitles">
-                            <div class="profile__purpose-subtitle">
-                                Маме на лечение
-                            </div>
-                            <div class="profile__purpose-allcash">
-                                <div class="profile__purpose-startcash">
-                                    100
-                                </div>
-                                <div class="profile__purpose-finishcash">
-                                    <span>/</span>100000
+                    <div class="purpose">
+                        <h1 class="purpose-title title">Активная цель</h1>
+                        <div class="purpose-inner">
+                            <div class="purpose__circle-outer">
+                                <div class="purpose__circle-inner">
+                                    <div class="purpose__circle-inner-text">18492Р/</div>
+                                    <div class="purpose__circle-inner-text">28931Р</div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="profile__item">
-                        <div class="profile__purpose">
-                            <div class="purpose__progress"></div>
-                        </div>
-                        <div class="profile__purpose-subtitles">
-                            <div class="profile__purpose-subtitle">
-                                Маме на лечение
-                            </div>
-                            <div class="profile__purpose-allcash">
-                                <div class="profile__purpose-startcash">
-                                    100
-                                </div>
-                                <div class="profile__purpose-finishcash">
-                                    <span>/</span>100000
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="profile__item">
-                        <div class="profile__purpose">
-                            <div class="purpose__progress"></div>
-                        </div>
-                        <div class="profile__purpose-subtitles">
-                            <div class="profile__purpose-subtitle">
-                                Маме на лечение
-                            </div>
-                            <div class="profile__purpose-allcash">
-                                <div class="profile__purpose-startcash">
-                                    100
-                                </div>
-                                <div class="profile__purpose-finishcash">
-                                    <span>/</span>100000
-                                </div>
-                            </div>
+                            <a href="" class="purpose-button button">Задать цель</a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="profile__footer">
-                <p>made by RTR 2023</p>
+                <div class="profile__donate">
+                    <h1 class="title">Важное</h1>
+                    <div class="profile__donate-inner">
+                        <div class="profile__donate-text">
+                            <h1 class="subtitle">Ссылка на донат</h1>
+                            <a href="#  " class="subtitle-change">Изменить</a>
+                        </div>
+                        <input type="text" class="donate__input" placeholder="http://localhost:8000/donate/lyakakoy" disabled>
+                        <div class="donate__last-container">
+                            <div class="subtitle">Последнее изменение</div>
+                            <p class="donate__last">Пока здесь ничего нет :(</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
-
-
-
     </section>
 
-    <script src="dashboard.js"></script>
+
+    <script src="profile.js"></script>
 
 </body>
 </html>
