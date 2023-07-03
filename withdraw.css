@@ -707,7 +707,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 102;
   display: none;
   background: #202020;
-  max-height: 675px;
+  max-height: 680px;
   height: 100%;
   max-width: 400px;
   width: 100%;
@@ -726,8 +726,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   top: 80px;
   width: 100%;
-  max-height: 595px;
-  height: 100%;
+  height: 600px;
 }
 
 .subtitle {
@@ -805,4 +804,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .save:hover {
   background: rgba(255, 255, 255, 0.8784313725);
+}
+
+@media screen and (max-height: 700px) {
+  .inp_cash {
+    margin-bottom: 5px;
+  }
+  .subtitle {
+    margin-bottom: 5px;
+  }
+  .modal-window {
+    max-height: 600px;
+  }
+  .modal-window-main {
+    max-height: 520px;
+  }
 }/*# sourceMappingURL=withdraw.css.map */

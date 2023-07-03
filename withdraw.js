@@ -8,7 +8,7 @@ let select = document.querySelector('.selection')
 
 function createFillerModal() {
     let elem = document.createElement('div');
-    elem.style.position = 'absolute';
+    elem.style.position = 'fixed';
     elem.style.top = 0;
     elem.style.width = '100vw';
     elem.style.height = '100vh';
@@ -79,7 +79,7 @@ document.addEventListener('keydown', function(e) {
 modalBtn.onclick = () => {
     modalWindow.style.display = 'flex';
     document.body.append(fillerModal);
-    document.getElementsByTagName('html')[0].style.overflowY = "hidden";
+    // document.getElementsByTagName('html')[0].style.overflowY = "hidden";
 }
 
 closeBtn.onclick = function() {
