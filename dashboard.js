@@ -70,7 +70,7 @@ function createMessage(elem, date, cash) {
 
 function createFiller() {
     let elem = document.createElement('div');
-    elem.style.position = 'absolute';
+    elem.style.position = 'fixed';
     elem.style.top = 0;
     elem.style.width = '100vw';
     elem.style.height = '100vh';
@@ -91,17 +91,10 @@ for(let item of diagramItems) {
 
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-        sidebar.classList.toggle('active');
-        sidebar.classList.toggle('toggle');
-        if (sidebar.classList.contains('active')) {
-            document.body.append(filler);
-            document.getElementsByTagName('html')[0].style.overflowY = "hidden";
-        }
-    
-        else {
-            filler.remove();
-            document.getElementsByTagName('html')[0].style.overflowY = "scroll";
-        }
+        sidebar.classList.remove('active');
+        sidebar.classList.remove('toggle');
+        document.getElementsByTagName('html')[0].style.overflowY = "hidden" ? '' : document.getElementsByTagName('html')[0].style.overflowY = "scroll"
+        sidebar.classList.contains('active') ? document.body.append(filler) :  filler.remove()
     }
 })
 

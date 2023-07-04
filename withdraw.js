@@ -19,7 +19,7 @@ function createFillerModal() {
 
 function createFillerSidebar() {
     let elem = document.createElement('div');
-    elem.style.position = 'absolute';
+    elem.style.position = 'fixed';
     elem.style.top = 0;
     elem.style.width = '100vw';
     elem.style.height = '100vh';
@@ -68,11 +68,8 @@ document.addEventListener('keydown', function(e) {
         modalWindow.style.display = 'none';
         fillerModal.remove();
         fillerSidebar.remove();
-        document.getElementsByTagName('html')[0].style.overflowY = "scroll";
-        if (sidebar.classList.contains('active')) {
-            sidebar.classList.toggle('active');
-            sidebar.classList.toggle('toggle');
-        }
+        document.getElementsByTagName('html')[0].style.overflowY = "hidden" ? '' : document.getElementsByTagName('html')[0].style.overflowY = "scroll"
+        sidebar.classList.contains('active') ?  sidebar.classList.remove('active', 'toggle')  :  filler.remove()
     }
 })
 
@@ -104,5 +101,4 @@ btnSide.onclick = function () {
 saveBtn.onclick = function() {
     modalWindow.style.display = 'none';
     fillerModal.remove();
-    document.getElementsByTagName('html')[0].style.overflowY = "scroll";
 }

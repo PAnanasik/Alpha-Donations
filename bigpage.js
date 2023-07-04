@@ -1,7 +1,5 @@
 let btnSide = document.querySelector('#btnside');
 let sidebar = document.querySelector('.sidebar');
-let changeBtn = document.querySelector('.subtitle-change');
-let lastChange = document.querySelector('.donate__last');
 
 function createFiller() {
     let elem = document.createElement('div');
@@ -19,13 +17,7 @@ document.addEventListener('keydown', function(e) {
         sidebar.classList.remove('active');
         sidebar.classList.remove('toggle');
         document.getElementsByTagName('html')[0].style.overflowY = "hidden" ? '' : document.getElementsByTagName('html')[0].style.overflowY = "scroll"
-        if (sidebar.classList.contains('active')) {
-            document.body.append(filler);
-        }
-    
-        else {
-            filler.remove();
-        }
+        sidebar.classList.contains('active') ? document.body.append(filler) :  filler.remove()
     }
 })
 
@@ -35,14 +27,10 @@ btnSide.onclick = function () {
     sidebar.classList.toggle('toggle');
     if (sidebar.classList.contains('active')) {
         document.body.append(filler);
+        document.getElementsByTagName('html')[0].style.overflow = "hidden";
     }
     else {
         filler.remove();
+        document.getElementsByTagName('html')[0].style.overflow = "scroll";
     }
 };
-
-changeBtn.onclick = () => {
-    document.querySelector('.donate__input').disabled = !document.querySelector('.donate__input').disabled;
-    document.querySelector('.donate__input').disabled ? lastChange.innerHTML = new Date() : new Date()
-
-}
