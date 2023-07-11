@@ -34,3 +34,12 @@ btnSide.onclick = function () {
         document.getElementsByTagName('html')[0].style.overflow = "scroll";
     }
 };
+
+
+function detectPage(path) {
+    if (document.URL.includes(`${path}`) ) {
+        return console.log('1');
+    }
+}
+
+detectPage('bigpage.html')

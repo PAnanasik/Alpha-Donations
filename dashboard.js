@@ -8,8 +8,6 @@ let selectedItem = document.querySelector('.selected__item')
 
 function getCoords(elem) {
     let box = elem.getBoundingClientRect();
-    console.log(box);
-    console.log(window.scrollY);
 
     return {
         top: box.top + window.scrollY,
@@ -60,8 +58,6 @@ function createMessage(elem, date, cash) {
 
     message.style.left = coords.left + "px";
     message.style.top = coords.top - 45 + "px";
-    console.log(message.style.left);
-    console.log(message.style.top);
 
     message.innerHTML = date + '<br>' + cash;
     return message;
