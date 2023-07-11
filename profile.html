@@ -54,15 +54,22 @@
                 <div class="profile__main">
                     <div class="profile__img">
                         <img src="pictures/avatar-example.jpg" alt="">
+                        <label for="image" class="profile__back">
+                            <input type="file" name="image" id="image" style="display: none;">
+                            <img src="pictures/icons/icon-add-photo.png" alt="">
+                        </label>
                     </div>
                     <div class="profile__info">
-                        <div class="profile__nick">PAnanasik</div>
+                        <input class="profile__nick" value="PAnanasik" disabled></input>
                         <div class="profile__mp">
                             <div class="profile__prof"><i class='bx bxl-telegram' ></i> Стример</div>
                         </div>
                         <div class="profile__achiv">
                             <div class="achiv__text">1 год</div>
                             <div class="achiv__text">миллионер</div>
+                        </div>
+                        <div class="profile__info-change">
+                            <a href="#" class="profile__info-change-btn"><i class='bx bx-edit-alt'></i>Редактировать</a>
                         </div>
                     </div>
                 </div>
@@ -75,15 +82,18 @@
             <div class="profile__group">
                 <div class="profile__purposes">
                     <div class="purpose">
-                        <h1 class="purpose-title title">Активная цель</h1>
+                        <div class="purpose-title__container">
+                            <h1 class="purpose-title title">Активная цель</h1>
+                            <a href="#" class="purpose-title title-more" id="purpose-change">Изменить</a>
+                        </div>
                         <div class="purpose-inner">
                             <div class="purpose__circle-outer">
                                 <div class="purpose__circle-inner">
                                     <div class="purpose__circle-inner-text">18492Р/</div>
-                                    <div class="purpose__circle-inner-text">28931Р</div>
+                                    <input type ="text" class="purpose__circle-inner-text" id="purpose__input" value="28811" disabled/>
                                 </div>
                             </div>
-                            <a href="" class="purpose-button button">Задать цель</a>
+                            <a href="#" class="purpose-button button">Задать цель</a>
                         </div>
                     </div>
                 </div>
@@ -94,10 +104,11 @@
                             <h1 class="subtitle">Ссылка на донат</h1>
                             <a href="#  " class="subtitle-change">Изменить</a>
                         </div>
-                        <input type="text" class="donate__input" placeholder="http://localhost:8000/donate/lyakakoy" disabled>
+                        <input type="text" class="donate__input" value="http://localhost:8000/donate/lyakakoy" disabled>
                         <div class="donate__last-container">
-                            <div class="subtitle">Последнее изменение</div>
-                            <p class="donate__last" style="font-size: 14px;">Пока здесь ничего нет :(</p>
+                            <div class="subtitle">Минимальная сумма</div>
+                            <input type="number" class="donate__input" id="donate__inp" disabled>
+                            <!-- <p class="donate__last" style="font-size: 14px;">Пока здесь ничего нет :(</p> -->
                         </div>
                     </div>
                 </div>
@@ -106,7 +117,8 @@
     </section>
 
 
-    <script src="profile.js"></script>
+    <script type="module"  src="profile.js"></script>
+    <script type="module" src="func.js"></script>
 
 </body>
 </html>

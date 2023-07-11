@@ -896,11 +896,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-i {
-  margin-right: 10px;
-  font-size: 18px;
-}
-
 .items-container__icon {
   width: 18px;
   height: 18px;

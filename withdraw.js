@@ -102,17 +102,3 @@ saveBtn.onclick = function() {
     modalWindow.style.display = 'none';
     fillerModal.remove();
 }
-
-const links = document.querySelectorAll('#link')
-
-function detectPage() {
-    for(let item of links) {
-        if ((document.URL.includes(`${item.getAttribute('href')}`))) {
-            item.parentNode.style.background = "rgba(255, 255, 255, 0.2)";
-            console.log(item.style.background)
-        }
-    }
-}
-
-detectPage();
-

@@ -53,6 +53,8 @@ $maxWidth: 1920;
 }
 
 
+
+
 .sidebar {
     position: fixed;
     top: 0;
@@ -889,11 +891,6 @@ $maxWidth: 1920;
 .items-container__text {
     display: flex;
     align-items: center;
-}
-
-i {
-    margin-right: 10px;
-    font-size: 18px;
 }
 
 .items-container__icon {
